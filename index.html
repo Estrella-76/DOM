@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Expresiones</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css\e1.css">
+
+</head>
+<body>
+    <header class="main-header">
+        <h1><i class="fas fa-calculator mr-2"></i> Evaluación de Expresiones Matemáticas</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-flask mr-2"></i> Ejercicios</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#exercise6"><i class="fas fa-superscript mr-1"></i> Ejercicio 6</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#exercise7"><i class="fas fa-superscript mr-1"></i> Ejercicio 7</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#exercise8"><i class="fas fa-project-diagram mr-1"></i> Ejercicio 8</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#exercise9"><i class="fas fa-puzzle-piece mr-1"></i> Ejercicio 9</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#exercise10"><i class="fas fa-infinity mr-1"></i> Ejercicio 10</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container shadow-lg">
+        <section id="exercise6" class="exercise-section">
+            <h2><i class="fas fa-cube mr-2"></i> Ejercicio 6</h2>
+            <p class="lead">Define la variable <var>z</var>.</p>
+            <form id="form6a">
+                <div class="form-group">
+                    <label for="z6"><i class="fas fa-variable mr-2"></i> Valor de <var>z</var>:</label>
+                    <input type="number" class="form-control" id="z6" value="4.5">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(6, 'a')"><i class="fas fa-play mr-2"></i> Evaluar (a)</button>
+                <div id="result6a" class="result mt-3"></div>
+            </form>
+            <form id="form6b" class="mt-3">
+                <div class="form-group">
+                    <label for="z6b"><i class="fas fa-variable mr-2"></i> Valor de <var>z</var>:</label>
+                    <input type="number" class="form-control" id="z6b" value="4.5">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(6, 'b')"><i class="fas fa-play mr-2"></i> Evaluar (b)</button>
+                <div id="result6b" class="result mt-3"></div>
+            </form>
+        </section>
+
+        <section id="exercise7" class="exercise-section">
+            <h2><i class="fas fa-chart-line mr-2"></i> Ejercicio 7</h2>
+            <p class="lead">Define la variable <var>t</var>.</p>
+            <form id="form7a">
+                <div class="form-group">
+                    <label for="t7"><i class="fas fa-variable mr-2"></i> Valor de <var>t</var>:</label>
+                    <input type="number" class="form-control" id="t7" value="3.2">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(7, 'a')"><i class="fas fa-play mr-2"></i> Evaluar (a)</button>
+                <div id="result7a" class="result mt-3"></div>
+            </form>
+            <form id="form7b" class="mt-3">
+                <div class="form-group">
+                    <label for="t7b"><i class="fas fa-variable mr-2"></i> Valor de <var>t</var>:</label>
+                    <input type="number" class="form-control" id="t7b" value="3.2">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(7, 'b')"><i class="fas fa-play mr-2"></i> Evaluar (b)</button>
+                <div id="result7b" class="result mt-3"></div>
+            </form>
+        </section>
+
+        <section id="exercise8" class="exercise-section">
+            <h2><i class="fas fa-project-diagram mr-2"></i> Ejercicio 8</h2>
+            <p class="lead">Define las variables <var>x</var> e <var>y</var>.</p>
+            <form id="form8a">
+                <div class="form-group">
+                    <label for="x8"><i class="fas fa-variable mr-2"></i> Valor de <var>x</var>:</label>
+                    <input type="number" class="form-control" id="x8" value="6.5">
+                </div>
+                <div class="form-group">
+                    <label for="y8"><i class="fas fa-variable mr-2"></i> Valor de <var>y</var>:</label>
+                    <input type="number" class="form-control" id="y8" value="3.8">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(8, 'a')"><i class="fas fa-play mr-2"></i> Evaluar (a)</button>
+                <div id="result8a" class="result mt-3"></div>
+            </form>
+            <form id="form8b" class="mt-3">
+                <div class="form-group">
+                    <label for="x8b"><i class="fas fa-variable mr-2"></i> Valor de <var>x</var>:</label>
+                    <input type="number" class="form-control" id="x8b" value="6.5">
+                </div>
+                <div class="form-group">
+                    <label for="y8b"><i class="fas fa-variable mr-2"></i> Valor de <var>y</var>:</label>
+                    <input type="number" class="form-control" id="y8b" value="3.8">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(8, 'b')"><i class="fas fa-play mr-2"></i> Evaluar (b)</button>
+                <div id="result8b" class="result mt-3"></div>
+            </form>
+        </section>
+
+        <section id="exercise9" class="exercise-section">
+            <h2><i class="fas fa-puzzle-piece mr-2"></i> Ejercicio 9</h2>
+            <p class="lead">Define las variables <var>a, b, c</var> y <var>d</var> con las relaciones dadas: <var>c</var> = 4.6, <var>d</var> = 1.7, <var>a</var> = <var>cd</var><sup>2</sup>, y <var>b</var> = (<var>c</var>+<var>a</var>)/(<var>c</var>-<var>d</var>).</p>
+            <form id="form9a">
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(9, 'a')"><i class="fas fa-play mr-2"></i> Evaluar (a)</button>
+                <div id="result9a" class="result mt-3"></div>
+            </form>
+            <form id="form9b" class="mt-3">
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(9, 'b')"><i class="fas fa-play mr-2"></i> Evaluar (b)</button>
+                <div id="result9b" class="result mt-3"></div>
+            </form>
+        </section>
+
+        <section id="exercise10" class="exercise-section">
+            <h2><i class="fas fa-infinity mr-2"></i> Ejercicio 10</h2>
+            <p class="lead">Verificar las identidades trigonométricas para <var>x</var> = π / 10.</p>
+            <form id="form10a">
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(10, 'a')"><i class="fas fa-check-double mr-2"></i> Verificar (a)</button>
+                <div id="result10a" class="result mt-3"></div>
+            </form>
+            <form id="form10b" class="mt-3">
+                <button type="button" class="btn btn-primary" onclick="evaluateExercise(10, 'b')"><i class="fas fa-check-double mr-2"></i> Verificar (b)</button>
+                <div id="result10b" class="result mt-3"></div>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p><i class="fas fa-copyright mr-2"></i> 2025 nos reservamos los derechos de autor</p>
+    </footer>
+
+    <script src="js\js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
